@@ -1,0 +1,8 @@
+C:\Users\yyang\Documents\github\IMergerPrototype\Imerger\MergeDllsIntoOne\MergeDllsIntoOne\obj\Release\MergeDllsIntoOne.csproj.CoreCompileInputs.cache
+C:\Users\yyang\Documents\github\IMergerPrototype\Imerger\MergeDllsIntoOne\MergeDllsIntoOne\obj\Release\MergeDllsIntoOne.dll
+C:\Users\yyang\Documents\github\IMergerPrototype\Imerger\MergeDllsIntoOne\MergeDllsIntoOne\obj\Release\MergeDllsIntoOne.pdb
+C:\Users\yyang\Documents\github\IMergerPrototype\Imerger\MergeDllsIntoOne\MergeDllsIntoOne\bin\Release\MergeDllsIntoOne.dll
+C:\Users\yyang\Documents\github\IMergerPrototype\Imerger\MergeDllsIntoOne\MergeDllsIntoOne\bin\Release\MergeDllsIntoOne.pdb
+C:\Users\yyang\Documents\github\IMergerPrototype\Imerger\MergeDllsIntoOne\MergeDllsIntoOne\bin\Release\Newtonsoft.Json.dll
+C:\Users\yyang\Documents\github\IMergerPrototype\Imerger\MergeDllsIntoOne\MergeDllsIntoOne\bin\Release\Newtonsoft.Json.xml
+C:\Users\yyang\Documents\github\IMergerPrototype\Imerger\MergeDllsIntoOne\MergeDllsIntoOne\obj\Release\MergeDllsIntoOne.csproj.CopyComplete

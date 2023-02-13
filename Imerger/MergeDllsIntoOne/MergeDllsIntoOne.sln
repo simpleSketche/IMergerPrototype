@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32510.428
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeDllsIntoOne", "MergeDllsIntoOne\MergeDllsIntoOne.csproj", "{8E0B89E9-4290-4157-B992-1E968316F563}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E0B89E9-4290-4157-B992-1E968316F563}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E0B89E9-4290-4157-B992-1E968316F563}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E0B89E9-4290-4157-B992-1E968316F563}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E0B89E9-4290-4157-B992-1E968316F563}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E125AF88-47ED-4BA0-A519-4E9AF53F5F27}
+	EndGlobalSection
+EndGlobal
