@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using Grasshopper.Kernel.Types;
 using System.IO;
+using System.Reflection;
+using System.Linq;
 
 namespace MergeDllsIntoOne
 {
@@ -25,10 +27,6 @@ namespace MergeDllsIntoOne
         /// </summary>
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
-            pManager.AddTextParameter("name", "name", "name", GH_ParamAccess.item);
-            pManager.AddIntegerParameter("age", "age", "age", GH_ParamAccess.item);
-            pManager.AddNumberParameter("height", "height", "height", GH_ParamAccess.item);
-            pManager.AddPointParameter("point", "point", "point", GH_ParamAccess.item);
         }
 
         /// <summary>
@@ -36,7 +34,9 @@ namespace MergeDllsIntoOne
         /// </summary>
         protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
         {
-            pManager.AddTextParameter("jsonOutput", "jsonOutput", "jsonOutput", GH_ParamAccess.item);
+            pManager.AddTextParameter("assemblyName", "assemblyName", "assemblyName", GH_ParamAccess.list);
+            pManager.AddTextParameter("version", "version", "version", GH_ParamAccess.list);
+            pManager.AddTextParameter("assemblyName2", "assemblyName2", "version", GH_ParamAccess.item);
         }
 
         /// <summary>
@@ -45,29 +45,43 @@ namespace MergeDllsIntoOne
         /// <param name="DA">The DA object is used to retrieve from inputs and store in outputs.</param>
         protected override void SolveInstance(IGH_DataAccess DA)
         {
-            string name = null;
-            int age = 0;
-            double height = 0;
-            GH_Point pt = null;
-
-            if(!DA.GetData(0, ref name)) { return; }
-            if (!DA.GetData(1, ref age)) { return; }
-            if (!DA.GetData(2, ref height)) { return; }
-            if (!DA.GetData(3, ref pt)) { return; }
 
             testDto dto = new testDto()
             {
-                name = name,
-                age = age,
-                height = height,
-                point = pt,
+                name = "name",
+                age = 3,
+                height = 1.09,
+                point = new GH_Point(new Point3d(0,0,0)),
             };
 
-            string path = Environment.ExpandEnvironmentVariables("%appdata%/Grasshopper/Libraries/mergeDllsTest.json");
+            List<string> allVersions = new List<string>();
+            List<string> assemblyNames = new List<string>();
+            string assemblyNames2 = "";
+            string assemblyNames3 = "";
+            string assemblyNames4 = "";
+            string assemblyNames5 = "";
+
+            string path = Environment.ExpandEnvironmentVariables("%appdata%/Grasshopper/Libraries/mergeDllsTest3.json");
             string dataJson = JsonConvert.SerializeObject(dto);
             File.WriteAllText(path, dataJson);
 
-            DA.SetData(0, dataJson);
+            List<AssemblyName> assembly = Assembly.GetExecutingAssembly().GetReferencedAssemblies().ToList();
+            AssemblyName assembly2 = System.Reflection.Assembly.GetExecutingAssembly().GetName();
+            assemblyNames2 = assembly2.ToString();
+
+
+
+
+            foreach (AssemblyName curName in assembly)
+            {
+                string info = curName.Version.ToString();
+                allVersions.Add(info);
+                assemblyNames.Add(curName.ToString());
+            }
+
+            DA.SetDataList(0, assemblyNames);
+            DA.SetDataList(1, allVersions);
+            DA.SetData(2, assemblyNames2);
         }
 
         /// <summary>
