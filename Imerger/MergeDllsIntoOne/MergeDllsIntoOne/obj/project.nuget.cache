@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZSF3RIU+koOuKsy+R4Sj4shBf0bFDLEpC/YxemMNmE9Pp0is5apfpUGF0FHVNO4v+5y2LibCIUoEj/IWckimKg==",
+  "dgSpecHash": "0iPDMa5Fc+bsB1aeFpwjhKDixpklDWFnqzOZvKJcGIOKK0rrHdfwPIBP2BXtE8fmkfMZSjSLn1MH4dcT9E8HAQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\yyang\\Documents\\github\\IMergerPrototype\\Imerger\\MergeDllsIntoOne\\MergeDllsIntoOne\\MergeDllsIntoOne.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\yyang\\.nuget\\packages\\ilmerge\\3.0.29\\ilmerge.3.0.29.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

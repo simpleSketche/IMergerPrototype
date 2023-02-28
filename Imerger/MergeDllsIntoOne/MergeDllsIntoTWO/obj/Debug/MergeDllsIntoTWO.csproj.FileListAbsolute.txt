@@ -1,0 +1,3 @@
+C:\Users\yyang\Documents\github\IMergerPrototype\Imerger\MergeDllsIntoOne\MergeDllsIntoTWO\obj\Debug\MergeDllsIntoTWO.csproj.CoreCompileInputs.cache
+C:\Users\yyang\Documents\github\IMergerPrototype\Imerger\MergeDllsIntoOne\MergeDllsIntoTWO\obj\Debug\MergeDllsIntoTWO.dll
+C:\Users\yyang\Documents\github\IMergerPrototype\Imerger\MergeDllsIntoOne\MergeDllsIntoTWO\obj\Debug\MergeDllsIntoTWO.pdb

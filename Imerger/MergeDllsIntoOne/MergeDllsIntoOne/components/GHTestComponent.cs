@@ -2,11 +2,11 @@
 using Rhino.Geometry;
 using System;
 using System.Collections.Generic;
-using Newtonsoft.Json;
 using Grasshopper.Kernel.Types;
 using System.IO;
 using System.Reflection;
 using System.Linq;
+using TestClassDependency;
 
 namespace MergeDllsIntoOne
 {
@@ -34,9 +34,11 @@ namespace MergeDllsIntoOne
         /// </summary>
         protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
         {
-            pManager.AddTextParameter("assemblyName", "assemblyName", "assemblyName", GH_ParamAccess.list);
-            pManager.AddTextParameter("version", "version", "version", GH_ParamAccess.list);
-            pManager.AddTextParameter("assemblyName2", "assemblyName2", "version", GH_ParamAccess.item);
+            //pManager.AddTextParameter("assemblyName", "assemblyName", "assemblyName", GH_ParamAccess.list);
+            //pManager.AddTextParameter("version", "version", "version", GH_ParamAccess.list);
+            //pManager.AddTextParameter("assemblyName2", "assemblyName2", "version", GH_ParamAccess.item);
+
+            pManager.AddTextParameter("output", "output", "output", GH_ParamAccess.item);
         }
 
         /// <summary>
@@ -46,42 +48,47 @@ namespace MergeDllsIntoOne
         protected override void SolveInstance(IGH_DataAccess DA)
         {
 
-            testDto dto = new testDto()
-            {
-                name = "name",
-                age = 3,
-                height = 1.09,
-                point = new GH_Point(new Point3d(0,0,0)),
-            };
+            //testDto dto = new testDto()
+            //{
+            //    name = "name",
+            //    age = 3,
+            //    height = 1.09,
+            //    point = new GH_Point(new Point3d(0,0,0)),
+            //};
 
-            List<string> allVersions = new List<string>();
-            List<string> assemblyNames = new List<string>();
-            string assemblyNames2 = "";
-            string assemblyNames3 = "";
-            string assemblyNames4 = "";
-            string assemblyNames5 = "";
+            //List<string> allVersions = new List<string>();
+            //List<string> assemblyNames = new List<string>();
+            //string assemblyNames2 = "";
+            //string assemblyNames3 = "";
+            //string assemblyNames4 = "";
+            //string assemblyNames5 = "";
 
-            string path = Environment.ExpandEnvironmentVariables("%appdata%/Grasshopper/Libraries/mergeDllsTest3.json");
-            string dataJson = JsonConvert.SerializeObject(dto);
-            File.WriteAllText(path, dataJson);
+            //string path = Environment.ExpandEnvironmentVariables("%appdata%/Grasshopper/Libraries/mergeDllsTest3.json");
+            //string dataJson = JsonConvert.SerializeObject(dto);
+            //File.WriteAllText(path, dataJson);
 
-            List<AssemblyName> assembly = Assembly.GetExecutingAssembly().GetReferencedAssemblies().ToList();
-            AssemblyName assembly2 = System.Reflection.Assembly.GetExecutingAssembly().GetName();
-            assemblyNames2 = assembly2.ToString();
-
-
+            //List<AssemblyName> assembly = Assembly.GetExecutingAssembly().GetReferencedAssemblies().ToList();
+            //AssemblyName assembly2 = System.Reflection.Assembly.GetExecutingAssembly().GetName();
+            //assemblyNames2 = assembly2.ToString();
 
 
-            foreach (AssemblyName curName in assembly)
-            {
-                string info = curName.Version.ToString();
-                allVersions.Add(info);
-                assemblyNames.Add(curName.ToString());
-            }
 
-            DA.SetDataList(0, assemblyNames);
-            DA.SetDataList(1, allVersions);
-            DA.SetData(2, assemblyNames2);
+
+            //foreach (AssemblyName curName in assembly)
+            //{
+            //    string info = curName.Version.ToString();
+            //    allVersions.Add(info);
+            //    assemblyNames.Add(curName.ToString());
+            //}
+
+            //DA.SetDataList(0, assemblyNames);
+            //DA.SetDataList(1, allVersions);
+            //DA.SetData(2, assemblyNames2);
+
+            TestClassOne testClass = new TestClassOne();
+            string response = testClass.TestMethodOne();
+            GH_String text = new GH_String(response);
+            DA.SetData(0, text);
         }
 
         /// <summary>

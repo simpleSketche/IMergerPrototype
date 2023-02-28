@@ -1,0 +1,6 @@
+C:\Users\yyang\Documents\github\IMergerPrototype\TestClassDependency\TestClassDependency\bin\Debug\TestClassDependency.dll
+C:\Users\yyang\Documents\github\IMergerPrototype\TestClassDependency\TestClassDependency\bin\Debug\TestClassDependency.pdb
+C:\Users\yyang\Documents\github\IMergerPrototype\TestClassDependency\TestClassDependency\obj\Debug\TestClassDependency.csproj.AssemblyReference.cache
+C:\Users\yyang\Documents\github\IMergerPrototype\TestClassDependency\TestClassDependency\obj\Debug\TestClassDependency.csproj.CoreCompileInputs.cache
+C:\Users\yyang\Documents\github\IMergerPrototype\TestClassDependency\TestClassDependency\obj\Debug\TestClassDependency.dll
+C:\Users\yyang\Documents\github\IMergerPrototype\TestClassDependency\TestClassDependency\obj\Debug\TestClassDependency.pdb

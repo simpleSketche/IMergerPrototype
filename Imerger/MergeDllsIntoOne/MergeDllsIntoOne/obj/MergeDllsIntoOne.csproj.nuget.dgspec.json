@@ -36,14 +36,7 @@
         }
       },
       "frameworks": {
-        "net48": {
-          "dependencies": {
-            "ILMerge": {
-              "target": "Package",
-              "version": "[3.0.29, )"
-            }
-          }
-        }
+        "net48": {}
       },
       "runtimes": {
         "win": {
